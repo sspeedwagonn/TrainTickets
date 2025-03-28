@@ -1,0 +1,6 @@
+#ifndef TRAINTICKETS_LIBRARY_H
+#define TRAINTICKETS_LIBRARY_H
+
+void hello(void);
+
+#endif //TRAINTICKETS_LIBRARY_H
