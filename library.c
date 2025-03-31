@@ -1,29 +1,25 @@
 #include "library.h"
-#include <stdio.h>
-
-struct Train {
-    int trainId;
-    char source[50];
-    char destination[50];
-    int totalSeats;
-    int availableSeats;
-    float ticketPrice;
-};
-
-struct User {
-    char username[50];
-    char password[50];
-    int tripsTaken;
-};
 
 void loginMenu() {
+    printf("\n----------\n");
+    printf("Login Menu:\n");
+    printf("1. Sign Up\n");
+    printf("2. Login\n");
+    printf("3. Quit\n");
     printf("----------\n");
-    printf("Login Menu\n");
-    printf("1. Login\n");
-    printf("2. Quit\n");
-    printf("----------");
 }
 
-int main() {
-    loginMenu();
+void dashboard(const char *username) {
+    printf("\n----------\n");
+    printf("Dashboard for %s:\n", username);
+    printf("1. Book Ticket\n");
+    printf("2. Refund Ticket\n");
+    printf("3. Check Train Status\n");
+    if (strcmp(username, "admin") == 0) {
+        printf("4. Add Train\n");
+        printf("5. Logout\n");
+    } else {
+        printf("4. Logout\n");
+    }
+    printf("----------\n");
 }
